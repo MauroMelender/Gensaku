@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://djwge603xj4qq"]
+
+[ext_resource type="PackedScene" uid="uid://cjrjf03twbtgk" path="res://scenes/player.tscn" id="1_nnsk1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nnsk1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnsk1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e5uuo"]
+size = Vector3(1.0033264, 1.014328, 1.0071411)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rwgxs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwgxs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nnsk1"]
+size = Vector3(1, 1.0098877, 1)
+
+[node name="World" type="Node3D" unique_id=1034190582]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=846545484]
+transform = Transform3D(0.8876145, 0.16278341, 0.430862, -0.46058714, 0.31370592, 0.8303301, 0, -0.93546253, 0.35342586, 0, 1.8782989, 3.2367382)
+
+[node name="TestFloor" type="MeshInstance3D" parent="." unique_id=837391553]
+transform = Transform3D(20, 0, 0, 0, 0.099, 0, 0, 0, 20, 0, -0.06128797, 0)
+mesh = SubResource("BoxMesh_nnsk1")
+surface_material_override/0 = SubResource("StandardMaterial3D_nnsk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TestFloor" unique_id=1088985029]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestFloor/StaticBody3D" unique_id=1837759215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014150849, -0.0014953613)
+shape = SubResource("BoxShape3D_e5uuo")
+
+[node name="Platform_A" type="StaticBody3D" parent="." unique_id=1894100822]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66369486, -1.3565662)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform_A" unique_id=664589911]
+mesh = SubResource("BoxMesh_rwgxs")
+surface_material_override/0 = SubResource("StandardMaterial3D_rwgxs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_A" unique_id=736656845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0025024414, 0)
+shape = SubResource("BoxShape3D_nnsk1")
+
+[node name="Player" parent="." unique_id=1220146216 instance=ExtResource("1_nnsk1")]
