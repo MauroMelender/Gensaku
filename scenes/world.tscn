@@ -43,4 +43,4 @@ surface_material_override/0 = SubResource("StandardMaterial3D_rwgxs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0025024414, 0)
 shape = SubResource("BoxShape3D_nnsk1")
 
-[node name="Player" parent="." unique_id=1220146216 instance=ExtResource("1_nnsk1")]
+[node name="Ziel_TheCrystalChimera" parent="." unique_id=1220146216 instance=ExtResource("1_nnsk1")]

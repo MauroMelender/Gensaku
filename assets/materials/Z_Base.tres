@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bf1y3608wlpdy"]
+
+[ext_resource type="Shader" uid="uid://wtnvoemml4un" path="res://assets/materials/MatBaseGensaku.gdshader" id="1_e8sax"]
+[ext_resource type="Texture2D" uid="uid://byw5c3uknuwal" path="res://assets/characters/Textures/Z_Scars.png" id="2_3yftm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_173x2"]
+load_path = "res://.godot/imported/Tex_Z_BaseBody.png-18ce8280e2532d91dc2d22010386b389.s3tc.ctex"
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_e8sax")
+shader_parameter/texture_base = SubResource("CompressedTexture2D_173x2")
+shader_parameter/texture_detail_1 = ExtResource("2_3yftm")
+shader_parameter/intensity_detail_1 = 1.0
+shader_parameter/tint_detail_1 = Color(1, 1, 1, 1)
+shader_parameter/intensity_detail_2 = 1.0
+shader_parameter/tint_detail_2 = Color(1, 1, 1, 1)
+shader_parameter/roughness = 1.0
+shader_parameter/metallic = 0.0

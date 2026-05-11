@@ -37,7 +37,7 @@ extends CharacterBody3D
 @onready var cam_pivot   : Node3D          = $CameraPivot
 @onready var spring_arm  : SpringArm3D     = $CameraPivot/SpringArm3D
 @onready var camera      : Camera3D        = $CameraPivot/SpringArm3D/Camera3D
-@onready var anim_player : AnimationPlayer = $Ziel/AnimationPlayer
+@onready var anim_player : AnimationPlayer = $Ziel_TheCrystalChimera/AnimationPlayer
 @onready var mesh_root   : Node3D          = $Ziel_TheCrystalChimera
 
 # ---------- NOMBRES DE ANIMACIONES ----------
