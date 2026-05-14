@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://byw5c3uknuwal" path="res://assets/characters/Textures/Z_Scars.png" id="5_dyp8c"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_putik"]
-load_path = "res://.godot/imported/Ziel v5_Tex_Z_BaseBody.png-47427d55e311aa0cef8c3ed1f65a9886.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kc8yi"]
 resource_name = "Mat_Z_BaseCrystal"
@@ -759,7 +758,6 @@ bind/231/bone = -1
 bind/231/pose = Transform3D(0.34751847, -0.7924906, -0.5011882, 0.28713742, -0.41888326, 0.86144596, -0.8926271, -0.4432783, 0.08198399, 0.9697857, 0.46772343, 0.5730481)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j4f5l"]
-load_path = "res://.godot/imported/Ziel v5_Z_Scars.png-5fa3f6334d3472953604d6cacc8a51f1.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o46un"]
 resource_name = "Mat_Z_BaseBodyShade"
@@ -947,7 +945,6 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ofv2i"]
-load_path = "res://.godot/imported/Ziel v5_Tex_Z_DirtySuit.png-e761aab64694f1981af3a17e93044151.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsdox"]
 resource_name = "Mat_Z_DirtySuit"
