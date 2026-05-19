@@ -1,10 +1,9 @@
 [gd_scene format=4 uid="uid://bwhgd5hjvpu31"]
 
-[ext_resource type="Material" uid="uid://b5jkfy5hh4yde" path="res://assets/materials/MatBaseGensaku.tres" id="1_l7ef4"]
+[ext_resource type="Material" uid="uid://bf1y3608wlpdy" path="res://assets/materials/Z_Base.tres" id="1_m136x"]
 [ext_resource type="Material" uid="uid://crv1dphhmunwt" path="res://assets/materials/Outline.tres" id="2_m136x"]
-[ext_resource type="Shader" uid="uid://wtnvoemml4un" path="res://assets/materials/MatBaseGensaku.gdshader" id="3_tifle"]
+[ext_resource type="Shader" uid="uid://dukdpafg0wjse" path="res://assets/materials/character_shader.gdshader" id="3_j42dl"]
 [ext_resource type="Texture2D" uid="uid://buxs6oy54vtke" path="res://assets/characters/Textures/Tex_Z_DirtySuit.png" id="4_bqbpc"]
-[ext_resource type="Texture2D" uid="uid://byw5c3uknuwal" path="res://assets/characters/Textures/Z_Scars.png" id="5_dyp8c"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_putik"]
 
@@ -993,17 +992,19 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pps1p"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7uouy"]
 render_priority = 0
-shader = ExtResource("3_tifle")
-shader_parameter/texture_base = ExtResource("4_bqbpc")
-shader_parameter/texture_detail_1 = ExtResource("5_dyp8c")
-shader_parameter/intensity_detail_1 = 1.0
-shader_parameter/tint_detail_1 = Color(1, 1, 1, 1)
-shader_parameter/intensity_detail_2 = 1.0
-shader_parameter/tint_detail_2 = Color(1, 1, 1, 1)
-shader_parameter/roughness = 1.0
-shader_parameter/metallic = 0.0
+shader = ExtResource("3_j42dl")
+shader_parameter/texture_albedo = ExtResource("4_bqbpc")
+shader_parameter/has_texture = true
+shader_parameter/preserve_hue = 0.6
+shader_parameter/preserve_hue_range = 0.12
+shader_parameter/preserve_sat_min = 0.25
+shader_parameter/color_boost = 1.4
+shader_parameter/bw_contrast = 1.4
+shader_parameter/bw_brightness = 1.1
+shader_parameter/outline_thickness = 0.003
+shader_parameter/outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0j7wv"]
 resource_name = "Ziel v5_4_Z_DirtySuit_Cint"
@@ -3015,126 +3016,144 @@ bones/231/rotation = Quaternion(0.7111823, -0.11995264, -0.55843717, 0.40985247)
 bones/231/scale = Vector3(0.9999999, 0.99999994, 0.99999994)
 
 [node name="Z_ArmCristalDetail" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=328692205]
+layers = 2
 mesh = SubResource("ArrayMesh_gachr")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_Body" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1515212089]
+layers = 2
 mesh = SubResource("ArrayMesh_qxkvy")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_CristalBlade" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1962415038]
+layers = 2
 mesh = SubResource("ArrayMesh_2qtw5")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_CristalWaistDetail" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=371196910]
+layers = 2
 mesh = SubResource("ArrayMesh_1n1f2")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_CrystalLegs" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=862508507]
+layers = 2
 mesh = SubResource("ArrayMesh_wp36h")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_CrystalTail" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=387202469]
+layers = 2
 mesh = SubResource("ArrayMesh_eiwq6")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_DirtySuit_ArmBandadges" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1474020480]
+layers = 2
 mesh = SubResource("ArrayMesh_pdpx3")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = SubResource("ShaderMaterial_pps1p")
+surface_material_override/0 = SubResource("ShaderMaterial_7uouy")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_DirtySuit_Cint" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1719097016]
+layers = 2
 mesh = SubResource("ArrayMesh_0j7wv")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = SubResource("ShaderMaterial_pps1p")
+surface_material_override/0 = SubResource("ShaderMaterial_7uouy")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_DirtySuit_Claw" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=2043503947]
+layers = 2
 mesh = SubResource("ArrayMesh_k6d0e")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = SubResource("ShaderMaterial_pps1p")
+surface_material_override/0 = SubResource("ShaderMaterial_7uouy")
 
 [node name="Z_DirtySuit_Holster" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1303533827]
+layers = 2
 mesh = SubResource("ArrayMesh_2hdkj")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = SubResource("ShaderMaterial_pps1p")
+surface_material_override/0 = SubResource("ShaderMaterial_7uouy")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_DirtySuit_LitleBackpack" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1273514180]
+layers = 2
 mesh = SubResource("ArrayMesh_wq45y")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = SubResource("ShaderMaterial_pps1p")
+surface_material_override/0 = SubResource("ShaderMaterial_7uouy")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_DirtySuit_Pants" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=795365260]
+layers = 2
 mesh = SubResource("ArrayMesh_28r7s")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = SubResource("ShaderMaterial_pps1p")
+surface_material_override/0 = SubResource("ShaderMaterial_7uouy")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_DirtySuit_TorsoBandadges" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1187617190]
+layers = 2
 mesh = SubResource("ArrayMesh_iqtnh")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = SubResource("ShaderMaterial_pps1p")
+surface_material_override/0 = SubResource("ShaderMaterial_7uouy")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_Gauntlet_R" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1871500733]
+layers = 2
 mesh = SubResource("ArrayMesh_r3hoh")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_Hair_Back" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1035626382]
+layers = 2
 mesh = SubResource("ArrayMesh_cw07t")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_Hair_Front" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=2006058770]
+layers = 2
 mesh = SubResource("ArrayMesh_vblrc")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_Hears" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=471223467]
+layers = 2
 mesh = SubResource("ArrayMesh_6dhg8")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")
 
 [node name="Z_Horns" type="MeshInstance3D" parent="Root_Ziel/Skeleton3D" unique_id=1222997405]
+layers = 2
 mesh = SubResource("ArrayMesh_n2bwf")
 skin = SubResource("Skin_omeh4")
 skeleton = NodePath("..")
-surface_material_override/0 = ExtResource("1_l7ef4")
+surface_material_override/0 = ExtResource("1_m136x")
 surface_material_override/1 = ExtResource("2_m136x")

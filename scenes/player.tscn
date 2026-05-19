@@ -2,12 +2,60 @@
 
 [ext_resource type="Script" uid="uid://b5sn1f10c5ghx" path="res://scenes/player.gd" id="1_smehm"]
 [ext_resource type="PackedScene" uid="uid://bwhgd5hjvpu31" path="res://scenes/ziel_v_5_4.tscn" id="2_g2els"]
+[ext_resource type="Shader" uid="uid://clsbeoeuu8dsa" path="res://assets/materials/manga_postprocess.gdshader" id="2_jej6c"]
 [ext_resource type="Animation" uid="uid://cbufoj7jdvlai" path="res://assets/characters/animations/locomotion/Z_FastRunCycle_24.anim" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://6xrkjvcsdelg" path="res://scenes/manga_post_process.gd" id="3_y4r1p"]
 [ext_resource type="Animation" uid="uid://oograjv4ykgd" path="res://assets/characters/animations/locomotion/Z_FallingCycle_24.anim" id="4_fjrip"]
+[ext_resource type="Shader" uid="uid://dukdpafg0wjse" path="res://assets/materials/character_shader.gdshader" id="5_3v2ag"]
 [ext_resource type="Animation" uid="uid://c42otsyna1v2k" path="res://assets/characters/animations/locomotion/Z_FallingLanding_24.anim" id="5_smehm"]
 [ext_resource type="Animation" uid="uid://buao6qxurljjf" path="res://assets/characters/animations/locomotion/Z_IdleCycle_24.anim" id="6_fjrip"]
+[ext_resource type="Material" uid="uid://dxvfpwau7xftf" path="res://assets/materials/BaseOutline.tres" id="6_jej6c"]
 [ext_resource type="Animation" uid="uid://c6wpdujxr1kv1" path="res://assets/characters/animations/locomotion/Z_RunJumping_24.anim" id="6_smehm"]
+[ext_resource type="Texture2D" uid="uid://pter7xjcdago" path="res://assets/characters/Textures/Tex_Z_BaseBody.png" id="7_jej6c"]
 [ext_resource type="Animation" uid="uid://dx66lxnyfajmo" path="res://assets/characters/animations/locomotion/Z_WalkCycle_24.anim" id="7_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://buxs6oy54vtke" path="res://assets/characters/Textures/Tex_Z_DirtySuit.png" id="8_f1ej7"]
+[ext_resource type="Script" uid="uid://r5dliksdhbyx" path="res://scenes/camera_3d.gd" id="13_oprun"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f1ej7"]
+render_priority = 0
+shader = ExtResource("5_3v2ag")
+shader_parameter/has_texture = false
+shader_parameter/preserve_hue = 0.6
+shader_parameter/preserve_hue_range = 0.12
+shader_parameter/preserve_sat_min = 0.25
+shader_parameter/color_boost = 1.4
+shader_parameter/bw_contrast = 1.4
+shader_parameter/bw_brightness = 1.1
+shader_parameter/outline_thickness = 0.003
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oprun"]
+render_priority = 0
+shader = ExtResource("5_3v2ag")
+shader_parameter/texture_albedo = ExtResource("7_jej6c")
+shader_parameter/has_texture = true
+shader_parameter/preserve_hue = 0.6
+shader_parameter/preserve_hue_range = 0.12
+shader_parameter/preserve_sat_min = 0.25
+shader_parameter/color_boost = 1.4
+shader_parameter/bw_contrast = 1.4
+shader_parameter/bw_brightness = 1.1
+shader_parameter/outline_thickness = 0.003
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8ls1"]
+render_priority = 0
+shader = ExtResource("5_3v2ag")
+shader_parameter/texture_albedo = ExtResource("8_f1ej7")
+shader_parameter/has_texture = true
+shader_parameter/preserve_hue = 0.6
+shader_parameter/preserve_hue_range = 0.12
+shader_parameter/preserve_sat_min = 0.25
+shader_parameter/color_boost = 1.4
+shader_parameter/bw_contrast = 1.4
+shader_parameter/bw_brightness = 1.1
+shader_parameter/outline_thickness = 0.003
+shader_parameter/outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dqkch"]
 _data = {
@@ -43,16 +91,31 @@ _data = {
 radius = 0.19824219
 height = 1.4241943
 
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_3v2ag"]
+dof_blur_near_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_jej6c"]
+size = Vector2(1.9318875, 0.767327)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3v2ag"]
+render_priority = 0
+shader = ExtResource("2_jej6c")
+shader_parameter/ink_contrast = 1.6
+shader_parameter/brightness = 1.0
+shader_parameter/edge_threshold = 0.06
+shader_parameter/edge_thickness_min = 0.8
+shader_parameter/edge_thickness_max = 2.6
+shader_parameter/edge_var_scale = 6.0
+shader_parameter/protagonist_color = Color(0.29, 0.56, 0.85, 1)
+shader_parameter/color_hue_range = 0.13
+shader_parameter/color_sat_threshold = 0.28
+shader_parameter/color_preserve = 0.88
+shader_parameter/vignette_strength = 0.28
+
+[sub_resource type="World3D" id="World3D_oprun"]
+
 [node name="Player" type="CharacterBody3D" unique_id=1220146216]
 script = ExtResource("1_smehm")
-
-[node name="CameraPivot" type="Node3D" parent="." unique_id=704489665]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 3.25)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=906382234]
-spring_length = 3.0
-
-[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1842568407]
 
 [node name="Ziel_TheCrystalChimera" parent="." unique_id=1511254562 instance=ExtResource("2_g2els")]
 
@@ -280,75 +343,75 @@ bones/230/rotation = Quaternion(0.71819645, 0.1599477, 0.5394446, 0.40940222)
 bones/231/rotation = Quaternion(0.6972297, -0.108857736, -0.55861396, 0.43585706)
 
 [node name="Z_ArmCristalDetail" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="0" unique_id=328692205]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_f1ej7")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_Body" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="1" unique_id=1515212089]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_f1ej7")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_CristalBlade" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="2" unique_id=1962415038]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_CristalWaistDetail" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="3" unique_id=371196910]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_CrystalLegs" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="4" unique_id=862508507]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_CrystalTail" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="5" unique_id=387202469]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_DirtySuit_ArmBandadges" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="6" unique_id=1474020480]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_a8ls1")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_DirtySuit_Cint" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="7" unique_id=1719097016]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_a8ls1")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_DirtySuit_Claw" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="8" unique_id=2043503947]
-surface_material_override/0 = null
+surface_material_override/0 = SubResource("ShaderMaterial_a8ls1")
 
 [node name="Z_DirtySuit_Holster" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="9" unique_id=1303533827]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_a8ls1")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_DirtySuit_LitleBackpack" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="10" unique_id=1273514180]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_a8ls1")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_DirtySuit_Pants" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="11" unique_id=795365260]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_a8ls1")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_DirtySuit_TorsoBandadges" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="12" unique_id=1187617190]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_a8ls1")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_Gauntlet_R" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="13" unique_id=1871500733]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_Hair_Back" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="14" unique_id=1035626382]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_Hair_Front" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="15" unique_id=2006058770]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_Hears" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="16" unique_id=471223467]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="Z_Horns" parent="Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="17" unique_id=1222997405]
-surface_material_override/0 = null
-surface_material_override/1 = null
+surface_material_override/0 = SubResource("ShaderMaterial_oprun")
+surface_material_override/1 = ExtResource("6_jej6c")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Ziel_TheCrystalChimera" unique_id=356720229]
 libraries/Falling = SubResource("AnimationLibrary_dqkch")
@@ -363,5 +426,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7371105, 0)
 shape = SubResource("CapsuleShape3D_smehm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=817930797]
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=704489665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 3.25)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=906382234]
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1842568407]
+cull_mask = 1048573
+attributes = SubResource("CameraAttributesPractical_3v2ag")
+script = ExtResource("13_oprun")
+
+[node name="MangaPostProcess" type="MeshInstance3D" parent="CameraPivot/SpringArm3D/Camera3D" unique_id=304210452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+cast_shadow = 0
+ignore_occlusion_culling = true
+mesh = SubResource("QuadMesh_jej6c")
+surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
+script = ExtResource("3_y4r1p")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1288288301]
+offset_right = 512.0
+offset_bottom = 512.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=325896802]
+world_3d = SubResource("World3D_oprun")
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="CameraPersonaje" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=250796020]
+cull_mask = 2
 
 [editable path="Ziel_TheCrystalChimera"]
