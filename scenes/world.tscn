@@ -239,101 +239,76 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0025024414, 0)
 shape = SubResource("BoxShape3D_nnsk1")
 
 [node name="Ziel_TheCrystalChimera" parent="." unique_id=1220146216 instance=ExtResource("1_nnsk1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.656038, 0, 3.2634945)
 
-[node name="Skeleton3D" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel" parent_id_path=PackedInt32Array(1220146216, 1511254562, 1137658318) index="0" unique_id=336719314]
-bones/51/rotation = Quaternion(-0.5929182, -0.44082782, 0.5565061, 0.38002625)
-bones/59/rotation = Quaternion(-0.12321199, -0.0022019653, 0.01360832, 0.9922847)
-bones/67/rotation = Quaternion(0.012240493, 0.0003044601, -0.004893479, 0.99991316)
-bones/74/rotation = Quaternion(0.028032316, 0.00487012, -0.032357223, 0.9990714)
-bones/75/rotation = Quaternion(0.07895878, 0.025741456, -0.07192726, 0.99394643)
-bones/86/rotation = Quaternion(0.8628995, 0.0069948295, -0.20741963, 0.4607957)
-bones/87/rotation = Quaternion(0.90239495, 0.005014758, -0.063899115, -0.42611623)
-bones/88/position = Vector3(0.030059276, -0.0986314, -0.37632623)
-bones/88/rotation = Quaternion(-0.4779017, -0.26865926, 0.2946484, 0.78269696)
-bones/88/scale = Vector3(0.99635106, 0.9963516, 0.99635166)
-bones/89/rotation = Quaternion(-0.25641224, 0.18796304, 0.07226007, 0.9453577)
-bones/90/rotation = Quaternion(0.66209507, 0.06935482, 0.31296015, 0.67740387)
-bones/91/rotation = Quaternion(0.937103, -0.04992961, 0.038227107, -0.343342)
-bones/92/position = Vector3(-0.111772075, -0.20783357, -0.31203973)
-bones/92/rotation = Quaternion(-0.30511293, 0.11862296, -0.5565984, 0.7635659)
-bones/93/rotation = Quaternion(-0.39529562, -0.19659449, -0.0376531, 0.89647883)
-bones/94/rotation = Quaternion(0.98606616, -0.081490666, -0.12758666, -0.06895392)
-bones/96/rotation = Quaternion(0.13068648, 0.05139132, -0.013722758, 0.9899959)
-bones/100/rotation = Quaternion(0.11787579, -0.2152638, -0.21435085, 0.9454209)
-bones/112/rotation = Quaternion(-0.007089458, -3.4540867e-07, 0.0019860007, 0.99997294)
-bones/114/rotation = Quaternion(-0.0070894943, 3.7154553e-07, -0.0019859932, 0.99997294)
-bones/122/rotation = Quaternion(-0.014343062, -0.0056375084, -0.008770721, 0.9998429)
-bones/144/rotation = Quaternion(-0.12681472, -0.028065883, 0.060593568, 0.9896762)
-bones/145/rotation = Quaternion(-0.21528733, -0.026473965, -0.09188413, 0.971858)
-
-[node name="Z_ArmCristalDetail" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="0" unique_id=328692205]
+[node name="Z_ArmCristalDetail" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="0" unique_id=328692205]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_Body" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="1" unique_id=1515212089]
+[node name="Z_Body" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="1" unique_id=1515212089]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_CristalBlade" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="2" unique_id=1962415038]
+[node name="Z_CristalBlade" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="2" unique_id=1962415038]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_CristalWaistDetail" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="3" unique_id=371196910]
+[node name="Z_CristalWaistDetail" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="3" unique_id=371196910]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_CrystalLegs" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="4" unique_id=862508507]
+[node name="Z_CrystalLegs" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="4" unique_id=862508507]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_CrystalTail" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="5" unique_id=387202469]
+[node name="Z_CrystalTail" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="5" unique_id=387202469]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_DirtySuit_ArmBandadges" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="6" unique_id=1474020480]
+[node name="Z_DirtySuit_ArmBandadges" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="6" unique_id=1474020480]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_DirtySuit_Cint" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="7" unique_id=1719097016]
+[node name="Z_DirtySuit_Cint" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="7" unique_id=1719097016]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_DirtySuit_Claw" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="8" unique_id=2043503947]
+[node name="Z_DirtySuit_Claw" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="8" unique_id=2043503947]
 surface_material_override/0 = null
 
-[node name="Z_DirtySuit_Holster" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="9" unique_id=1303533827]
-surface_material_override/0 = null
-surface_material_override/1 = null
-
-[node name="Z_DirtySuit_LitleBackpack" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="10" unique_id=1273514180]
+[node name="Z_DirtySuit_Holster" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="9" unique_id=1303533827]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_DirtySuit_Pants" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="11" unique_id=795365260]
+[node name="Z_DirtySuit_LitleBackpack" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="10" unique_id=1273514180]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_DirtySuit_TorsoBandadges" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="12" unique_id=1187617190]
+[node name="Z_DirtySuit_Pants" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="11" unique_id=795365260]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_Gauntlet_R" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="13" unique_id=1871500733]
+[node name="Z_DirtySuit_TorsoBandadges" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="12" unique_id=1187617190]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_Hair_Back" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="14" unique_id=1035626382]
+[node name="Z_Gauntlet_R" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="13" unique_id=1871500733]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_Hair_Front" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="15" unique_id=2006058770]
+[node name="Z_Hair_Back" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="14" unique_id=1035626382]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_Hears" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="16" unique_id=471223467]
+[node name="Z_Hair_Front" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="15" unique_id=2006058770]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
-[node name="Z_Horns" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" index="17" unique_id=1222997405]
+[node name="Z_Hears" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="16" unique_id=471223467]
+surface_material_override/0 = null
+surface_material_override/1 = null
+
+[node name="Z_Horns" parent="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera/Root_Ziel/Skeleton3D" parent_id_path=PackedInt32Array(1220146216, 1511254562, 336719314) index="17" unique_id=1222997405]
 surface_material_override/0 = null
 surface_material_override/1 = null
 
@@ -344,6 +319,74 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5629997e-05, -0.002334118,
 z_index = 1
 offset_right = 1150.0
 offset_bottom = 648.0
+
+[node name="Lv1" type="Node3D" parent="." unique_id=300186348]
+
+[node name="Wall1" type="MeshInstance3D" parent="Lv1" unique_id=874260559]
+transform = Transform3D(17.427626, 0, 0, 0, 6.047704, 0, 0, 0, 1, 31.769855, 2.8250735, 10.783851)
+mesh = SubResource("BoxMesh_nnsk1")
+surface_material_override/0 = SubResource("StandardMaterial3D_nnsk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lv1/Wall1" unique_id=827520797]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lv1/Wall1/StaticBody3D" unique_id=1348141841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014150849, -0.0014953613)
+shape = SubResource("BoxShape3D_e5uuo")
+
+[node name="Wall2" type="MeshInstance3D" parent="Lv1" unique_id=1823652795]
+transform = Transform3D(17.427626, 0, 0, 0, 6.047704, 0, 0, 0, 1, 31.769855, 2.8250735, -1.3918562)
+mesh = SubResource("BoxMesh_nnsk1")
+surface_material_override/0 = SubResource("StandardMaterial3D_nnsk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lv1/Wall2" unique_id=1622212307]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lv1/Wall2/StaticBody3D" unique_id=977848216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014150849, -0.0014953613)
+shape = SubResource("BoxShape3D_e5uuo")
+
+[node name="Wall3" type="MeshInstance3D" parent="Lv1" unique_id=1151649079]
+transform = Transform3D(17.427626, 0, 0, 0, 6.047704, 0, 0, 0, 1, 31.769855, 8.748013, -1.3918562)
+mesh = SubResource("BoxMesh_nnsk1")
+surface_material_override/0 = SubResource("StandardMaterial3D_nnsk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lv1/Wall3" unique_id=2094578695]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lv1/Wall3/StaticBody3D" unique_id=170315619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014150849, -0.0014953613)
+shape = SubResource("BoxShape3D_e5uuo")
+
+[node name="Platform1" type="MeshInstance3D" parent="Lv1" unique_id=916462645]
+transform = Transform3D(9.489339, 0, 0, 0, 2.1823368, 0, 0, 0, 4.949962, 31.769855, -0.5124471, 1.1504872)
+mesh = SubResource("BoxMesh_nnsk1")
+surface_material_override/0 = SubResource("StandardMaterial3D_nnsk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lv1/Platform1" unique_id=1934654260]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lv1/Platform1/StaticBody3D" unique_id=1962198657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014150828, -0.0014953613)
+shape = SubResource("BoxShape3D_e5uuo")
+
+[node name="Platform2" type="MeshInstance3D" parent="Lv1" unique_id=1217935247]
+transform = Transform3D(-4.1479217e-07, 0, -9.349541, 0, 4.940772, 0, 9.489339, 0, -4.0868142e-07, 36.811543, -0.62749267, 1.1504872)
+mesh = SubResource("BoxMesh_nnsk1")
+surface_material_override/0 = SubResource("StandardMaterial3D_nnsk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lv1/Platform2" unique_id=1210860493]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lv1/Platform2/StaticBody3D" unique_id=2051143915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014150828, -0.0014953613)
+shape = SubResource("BoxShape3D_e5uuo")
+
+[node name="Platform3" type="MeshInstance3D" parent="Lv1" unique_id=637761864]
+transform = Transform3D(-2.9293745, 0, -8.892899, 0, 4.940772, 0, 9.02587, 0, -2.886219, 42.67711, 0.9057629, 3.3631046)
+mesh = SubResource("BoxMesh_nnsk1")
+surface_material_override/0 = SubResource("StandardMaterial3D_nnsk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lv1/Platform3" unique_id=1962639966]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lv1/Platform3/StaticBody3D" unique_id=1113728057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014150828, -0.0014953613)
+shape = SubResource("BoxShape3D_e5uuo")
 
 [editable path="Ziel_TheCrystalChimera"]
 [editable path="Ziel_TheCrystalChimera/Ziel_TheCrystalChimera"]
